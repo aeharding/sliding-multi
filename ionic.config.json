@@ -1,0 +1,7 @@
+{
+  "name": "sliding-multi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
