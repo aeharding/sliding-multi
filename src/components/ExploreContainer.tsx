@@ -1,13 +1,29 @@
-import './ExploreContainer.css';
+import {
+  IonItem,
+  IonItemOption,
+  IonItemOptions,
+  IonItemSliding,
+  IonLabel,
+} from "@ionic/react";
+import "./ExploreContainer.css";
 
-interface ContainerProps { }
+interface ContainerProps {}
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
   return (
-    <div id="container">
-      <strong>Ready to create an app?</strong>
-      <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    </div>
+    <IonItemSliding>
+      <IonItemOptions side="start">
+        <IonItemOption color="primary">Test</IonItemOption>
+        <IonItemOption color="tertiary">Boom</IonItemOption>
+      </IonItemOptions>
+      <IonItem>
+        <IonLabel style={{ height: "600px" }}>Slide this item</IonLabel>
+      </IonItem>
+      <IonItemOptions side="end">
+        <IonItemOption color="danger">Delete</IonItemOption>
+        <IonItemOption color="warning">Another</IonItemOption>
+      </IonItemOptions>
+    </IonItemSliding>
   );
 };
 
